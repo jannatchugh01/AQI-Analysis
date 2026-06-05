@@ -1,6 +1,4 @@
---  Filter your data for the year 2024 and join the population projections 
--- with your AQI data to determine the relationship between a city's population size and its average AQI
--- . This will help answer if larger cities inherently suffer from worse air quality
+--  Analyse states population size and avg_aqi for last 3 years
 WITH avg_aqi_data AS(
 	SELECT
 		state,

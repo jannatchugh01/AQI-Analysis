@@ -1,4 +1,17 @@
 USE airpurifier;
+-- AQI Trend (Year wise)
+SELECT
+	state,
+    YEAR(Date) AS aqi_year,
+    ROUND(AVG(aqi_value),2) AS avg_aqi
+FROM aqi_data
+GROUP BY
+	state,
+    YEAR(Date)
+ORDER BY
+	state,
+    YEAR(Date);
+
 -- List the top 5 and bottom 5 areas with highest average AQI.
 WITH Avg_Aqi AS (
 SELECT Area, 
